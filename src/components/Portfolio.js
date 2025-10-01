@@ -3,12 +3,10 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Logo from '../components/image';
 import MainText from '../components/mainText';
-import SubText from './subText';
 import Text from './text';
 import Button from '../components/button';
-import IconButton from '../components/iconButton';
-import { BsInstagram, BsLinkedin, BsTwitterX } from 'react-icons/bs';
 import '../assets/images/style.css';
+import WorkExperience from './WorkExperience';
 
 function Portfolio() {
    const [isHovered, setIsHovered] = useState(false); 
@@ -63,38 +61,43 @@ function Portfolio() {
           >
             {/* Name */}
             <div className="name-section slide-up" style={{ animationDelay: '0.4s' }}>
-              <MainText text="LAURETTA OGBENNA" />
-            </div>
-
-            {/* Title */}
-            <div className="title-section slide-up" style={{ animationDelay: '0.6s' }}>
-              <SubText text="Data Analyst | Data Visualization" />
+              <MainText text="Professional Summary" />
             </div>
 
             {/* Description */}
             <div className="description-section slide-up" style={{ animationDelay: '0.8s' }}>
-              <Text text="Let's dive into data. From dashboards to deep insights, explore my work, connect with me, and stay updated across all platforms." />
+              <Text text="Detail-oriented and results-driven Data Analyst with a strong background in
+pharmaceutical technology and a passion for deriving insights that inform business
+strategy and financial literacy." />
+<Text text="Experienced in leveraging Excel, SQL, Power BI, and
+Python to analyze data, design dashboards, and drive data-backed decisions. Strong
+communicator with a multi-disciplinary edge, spanning business operations, content
+creation, and community engagement." />
             </div>
 
-            {/* Portfolio button - Updated click handler */}
+              {/* Name */}
+              <div className="name-section slide-up" style={{ animationDelay: '1.2s' }}>
+              <MainText text="Skills" />
+            </div>
+
+            {/* Description */}
+            <div className="description-section slide-up" style={{ animationDelay: '0.8s' }}>
+              <Text text="1. Excel" />
+              <Text text="2. Power BI" />
+              <Text text="3. SQL" />
+              <Text text="4. Python" />
+              <Text text="5. Tableau" />
+              <Text text="6. Google Sheets" />
+            </div>
+
+            <WorkExperience />
+
             <div className="button-section slide-up" style={{ animationDelay: '1s' }}>
               <div className="button-wrapper">
                 <Button text="Go Back" click={handleBackClick} />
               </div>
             </div>
 
-            {/* Social icons */}
-            <div className="social-section fade-in" style={{ animationDelay: '1.2s' }}>
-              <div className="icon-wrapper">
-                <IconButton Icon={BsInstagram} />
-              </div>
-              <div className="icon-wrapper" style={{ transitionDelay: '0.1s' }}>
-                <IconButton Icon={BsLinkedin} />
-              </div>
-              <div className="icon-wrapper" style={{ transitionDelay: '0.2s' }}>
-                <IconButton Icon={BsTwitterX} />
-              </div>
-            </div>
           </div>
 
           {/* Decorative glow effect on hover */}
