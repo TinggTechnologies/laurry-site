@@ -1,12 +1,12 @@
 // Portfolio.js
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../assets/images/style.css';
+import Button from '../components/button';
 import Logo from '../components/image';
 import MainText from '../components/mainText';
-import Text from './text';
-import Button from '../components/button';
-import '../assets/images/style.css';
-import WorkExperience from './WorkExperience';
+import Text from '../components/text';
+import WorkExperience from '../components/WorkExperience';
 
 function Portfolio() {
    const [isHovered, setIsHovered] = useState(false); 

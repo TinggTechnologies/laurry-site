@@ -1,7 +1,7 @@
 // App.js
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Intro from './components/intro';
-import Portfolio from './components/Portfolio'; // Create this component
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import Portfolio from './pages/Portfolio'; // Create this component
+import Intro from './pages/intro';
 
 function App() {
   return (
