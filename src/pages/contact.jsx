@@ -34,7 +34,7 @@ function Contact() {
             </div>
 
             <div className="description-section slide-up" style={{ animationDelay: '0.8s' }}>
-              <Text text="Email Address: izedonwenogbennalauretta@gmail.com" />
+              <Text text="Email: izedonwenogbennalauretta@gmail.com" />
               <Text text="Telephone: (+234) 7059428027" />
               <Text text="Home Address: Igando Lagos" />
 
