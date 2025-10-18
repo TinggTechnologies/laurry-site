@@ -392,6 +392,109 @@
   animation: fadeIn 0.3s ease forwards;
 }
 
+/* === Work Experience Scroll Layout === */
+.experience-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1.5rem;
+  padding: 10px;
+  position: relative;
+}
+
+.experience-scroll-container::-webkit-scrollbar {
+  height: 6px;
+}
+.experience-scroll-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #00bcd4, #673ab7);
+  border-radius: 4px;
+}
+
+/* === Individual Experience Card === */
+.experience-card {
+  min-width: 250px;
+  max-width: 250px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animated sliding border effect */
+.experience-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #00bcd4, #673ab7, #00bcd4);
+  transition: all 0.8s ease;
+}
+
+.experience-card:hover::before {
+  left: 0;
+}
+
+/* Optional glow hover */
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 188, 212, 0.4);
+}
+
+/* Header layout */
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* === Scroll Hint Animation === */
+.scroll-hint {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  margin-top: 10px;
+  color: #aaa;
+  font-size: 0.9rem;
+  animation: fadeInHint 2s infinite alternate;
+}
+
+.scroll-arrow {
+  width: 20px;
+  height: 2px;
+  background: #00bcd4;
+  position: relative;
+  animation: slideArrow 1.2s infinite ease-in-out;
+}
+
+.scroll-arrow::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -4px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 6px solid #00bcd4;
+}
+
+@keyframes slideArrow {
+  0% { transform: translateX(0); opacity: 0.5; }
+  50% { transform: translateX(8px); opacity: 1; }
+  100% { transform: translateX(0); opacity: 0.5; }
+}
+
+@keyframes fadeInHint {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
+}
+
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-5px); }
   to { opacity: 1; transform: translateY(0); }
