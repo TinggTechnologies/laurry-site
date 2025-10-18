@@ -1,21 +1,20 @@
-import { useNavigate, useHover, BackgroundBlobs, Button, Logo, MainText, Particles, SocialIcons, SubText, Text, MenuBar } from './index';
+import Education from '../components/Education.component';
+import { useNavigate, useHover, BackgroundBlobs, Button, Logo, MainText, Particles, MenuBar, WorkExperience } from './index';
 
-import '../assets/images/style.css';
-
-function Intro() {
+function Portfolio() {
   const navigate = useNavigate();
   const { isHovered, handleMouseEnter, handleMouseLeave } = useHover();
 
-  const handlePortfolioClick = () => {
-    navigate('/portfolio');
-  };
+  const handleBackClick = () => navigate(-1);
 
   return (
     <div className="intro-container">
-      <BackgroundBlobs />
-      <Particles />
-      <MenuBar />
+    
+    <BackgroundBlobs />
+    <Particles />
+     <MenuBar />
 
+      {/* Main content */}
       <div className="content-wrapper">
         <div className="content-container">
           {/* Logo */}
@@ -25,31 +24,25 @@ function Intro() {
             </div>
           </div>
 
-          {/* Content Card */}
+          {/* Main card */}
           <div
             className={`content-card ${isHovered ? 'hovered' : ''}`}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
             <div className="name-section slide-up" style={{ animationDelay: '0.4s' }}>
-              <MainText text="LAURETTA OGBENNA" />
-            </div>
-
-            <div className="title-section slide-up" style={{ animationDelay: '0.6s' }}>
-              <SubText text="Data Analyst | Data Visualization" />
+              <MainText text="Education" />
             </div>
 
             <div className="description-section slide-up" style={{ animationDelay: '0.8s' }}>
-              <Text text="Let's dive into data. From dashboards to deep insights, explore my work, connect with me, and stay updated across all platforms." />
+              <Education />
             </div>
 
-            <div className="button-section slide-up" style={{ animationDelay: '1s' }}>
+            <div className="button-section slide-up" style={{ animationDelay: '1.2s' }}>
               <div className="button-wrapper">
-                <Button text="My Portfolio" click={handlePortfolioClick} />
+                <Button text="Go Back" click={handleBackClick} />
               </div>
             </div>
-
-            <SocialIcons />
           </div>
 
           {isHovered && <div className="hover-glow"></div>}
@@ -61,4 +54,4 @@ function Intro() {
   );
 }
 
-export default Intro;
+export default Portfolio;

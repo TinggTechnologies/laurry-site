@@ -18,3 +18,10 @@ export const socialLinks = [
         url: 'https://twitter.com'
     }
 ]
+
+export const workExperience = [
+    {
+        id : 1,
+        
+    }
+]
