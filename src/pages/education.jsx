@@ -30,9 +30,6 @@ function Portfolio() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <div className="name-section slide-up" style={{ animationDelay: '0.4s' }}>
-              <MainText text="Education" />
-            </div>
 
             <div className="description-section slide-up" style={{ animationDelay: '0.8s' }}>
               <Education />
