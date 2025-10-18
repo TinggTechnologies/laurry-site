@@ -483,6 +483,36 @@
   border-left: 6px solid #00bcd4;
 }
 
+.pagination-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+  gap: 8px;
+  animation: fadeIn 0.6s ease-in;
+}
+
+.pagination-buttons button {
+  padding: 8px 16px;
+  border: none;
+  background: linear-gradient(90deg, #00bcd4, #673ab7);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination-buttons button:disabled {
+  background: rgba(255, 255, 255, 0.2);
+  cursor: not-allowed;
+}
+
+.pagination-buttons button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.4);
+}
+
+
 @keyframes slideArrow {
   0% { transform: translateX(0); opacity: 0.5; }
   50% { transform: translateX(8px); opacity: 1; }
