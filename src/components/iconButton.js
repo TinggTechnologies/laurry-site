@@ -1,7 +1,7 @@
-function IconButton({ Icon, link }) {
+function IconButton({ Icon, url }) {
     const handleClick = () => {
-      if (link) {
-        window.open(link, '_blank');
+      if (url) {
+        window.open(url, '_blank');
       }
     };
   

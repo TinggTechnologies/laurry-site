@@ -24,7 +24,6 @@ export default function MenuBar() {
       {menuOpen && (
         <div className="menu-dropdown fade-in">
           <p onClick={() => handleNavigation('/')}>🏠 Home</p>
-          <p onClick={() => handleNavigation('../projects')}>💼 Projects</p>
           <p onClick={() => handleNavigation('../portfolio')}>📊 Portfolio</p>
           <p onClick={() => handleNavigation('../contact')}>📩 Contact</p>
           <p onClick={() => handleNavigation('../about')}>👤 About</p>

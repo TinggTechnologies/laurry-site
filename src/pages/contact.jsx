@@ -1,6 +1,6 @@
 import { useNavigate, useHover, BackgroundBlobs, Button, Logo, MainText, Particles, Text, MenuBar} from './index';
 
-function Language() {
+function Contact() {
   const navigate = useNavigate();
   const { isHovered, handleMouseEnter, handleMouseLeave } = useHover();
 
@@ -30,14 +30,17 @@ function Language() {
             onMouseLeave={handleMouseLeave}
           >
             <div className="name-section slide-up" style={{ animationDelay: '0.4s' }}>
-              <MainText text="Languages" />
+              <MainText text="Contact" />
             </div>
 
             <div className="description-section slide-up" style={{ animationDelay: '0.8s' }}>
-              <Text text="English (Advance)" />
+              <Text text="Email Address: izedonwenogbennalauretta@gmail.com" />
+              <Text text="Telephone: (+234) 7059428027" />
+              <Text text="Home Address: Igando Lagos" />
+
             </div>
 
-            <div className="button-section slide-up" style={{ animationDelay: '1.2s' }}>
+            <div className="button-section slide-up" style={{ animationDelay: '2.4s' }}>
               <div className="button-wrapper">
                 <Button text="Go Back" click={handleBackClick} />
               </div>
@@ -53,4 +56,4 @@ function Language() {
   );
 }
 
-export default Language;
+export default Contact;

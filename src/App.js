@@ -5,6 +5,7 @@ import Intro from './pages/intro';
 import About from './pages/about';
 import Language from './pages/language';
 import Education from './pages/education';
+import Contact from './pages/contact';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/language" element={<Language />} />
         <Route path="/education" element={<Education />} />
+        <Route path='contact' element={<Contact />} />
       </Routes>
     </Router>
   );

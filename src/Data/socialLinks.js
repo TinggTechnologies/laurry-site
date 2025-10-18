@@ -10,7 +10,7 @@ export const socialLinks = [
     {
         id : 2, 
         Icon: BsLinkedin,
-        url: 'https://linkedin.com'
+        url: 'https://linkedin.com/in/lauretta-ogbenna'
     },
     {
          id : 3, 

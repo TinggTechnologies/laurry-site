@@ -78,13 +78,13 @@ export default function WorkExperience() {
 
   return (
     <div style={{ width: "100%" }}>
-      <div style={{ textAlign: "center" }}>
+      <div style={{ textAlign: "center", paddingBottom: "1rem" }}>
         <MainText text="Work Experience" />
       </div>
 
       {experiences.map((exp, index) => (
         <div key={index} style={{ marginBottom: "20px" }}>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
             <div>
               <SubText text={exp.program} />
               <SubText text={exp.position} />

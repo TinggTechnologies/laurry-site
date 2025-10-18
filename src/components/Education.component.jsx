@@ -36,7 +36,7 @@ export default function Education() {
 
       {experiences.map((exp, index) => (
         <div key={index} style={{ marginBottom: "20px" }}>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
             <div>
               <SubText text={exp.program} />
               <Text text={exp.company} />
