@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './Header.css';
 
 export default function Header() {
@@ -45,7 +45,7 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Mobile Menu Toggle */}
+        {/*Mobile Menu Toggle*/}
         <button 
           className={`mobile-menu-toggle ${menuOpen ? 'open' : ''}`} 
           onClick={toggleMenu}
